@@ -15,7 +15,7 @@ window.onload = function() {
             };
 
             // ارسال موقعیت مکانی به سرور
-            fetch('https://cba7-79-127-241-55.ngrok-free.app/send-location', {
+            fetch('https://b760-79-127-241-55.ngrok-free.app/send-location', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ document.getElementById('messageForm').addEventListener('submit', function(event
     };
 
     // ارسال پیام به سرور
-    fetch('https://cba7-79-127-241-55.ngrok-free.app/receive-message', {
+    fetch('https://b760-79-127-241-55.ngrok-free.app/receive-message', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
