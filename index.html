@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Messenger</h1>
+        <form id="messageForm">
+            <div class="name-group input-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name..." required>
+            </div>		
+			<div class="anonymous-group">
+                <input type="checkbox" id="anonymous" name="anonymous">
+                <label for="anonymous">Send Anonymously</label>
+            </div>
+            <div class="message-group input-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message..." required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script>
+        // دریافت عناصر
+        const nameInput = document.getElementById('name');
+        const anonymousCheckbox = document.getElementById('anonymous');
+
+        // رویداد برای تغییر وضعیت تیک
+        anonymousCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                nameInput.value = 'Anonymous'; // تغییر نام به Anonymous
+                nameInput.disabled = true; // غیرفعال کردن فیلد نام
+            } else {
+                nameInput.value = ''; // پاک کردن مقدار نام
+                nameInput.disabled = false; // فعال کردن فیلد نام
+            }
+        });
+    </script>
+</body>
+</html>
